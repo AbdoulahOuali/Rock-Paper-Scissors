@@ -10,4 +10,7 @@
     <string name="versus">V.S.</string>
     <string name="computer">Computer</string>
     <string name="player">You</string>
+    <string name="scissors_button">Scissors Button</string>
+    <string name="paper_button">Paper Button</string>
+    <string name="rock_button">Rock Button</string>
 </resources>
