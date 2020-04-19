@@ -17,11 +17,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        setTitle(R.string.app_name)
+
+
+
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
+
+        var clearHistory = menu.findItem(R.id.clear_history)
+        clearHistory.isVisible = false
+
+        var fetchHistory: MenuItem = menu.findItem(R.id.fetch_history)
+        fetchHistory.isVisible = true
         return true
     }
 
@@ -30,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_history -> {
+            R.id.fetch_history -> {
                 Log.i("MainActivity", "View History option clicked")
                 val intent = Intent(this, GameHistoryActivity::class.java)
                 startActivity(intent)
