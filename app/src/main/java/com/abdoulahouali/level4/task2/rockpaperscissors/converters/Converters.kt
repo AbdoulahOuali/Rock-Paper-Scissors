@@ -1,7 +1,6 @@
 package com.abdoulahouali.level4.task2.rockpaperscissors.converters
 
 import androidx.room.TypeConverter
-import com.abdoulahouali.level4.task2.rockpaperscissors.model.GameResult
 import java.util.*
 
 class Converters {
@@ -15,9 +14,4 @@ class Converters {
         return date?.time
     }
 
-    @TypeConverter
-    fun toResult(value: String) = enumValueOf<GameResult>(value)
-
-    @TypeConverter
-    fun fromResult(result: GameResult) = result.value
 }

@@ -16,11 +16,20 @@ class GameRepository(context: Context) {
         gameDao = gameDataBase.gameDao()
     }
 
-    fun getAllGames(): List<Game> {
+    suspend fun getAllGames(): List<Game> {
         return gameDao.getGamesHistory()
     }
 
     suspend fun insertGame(game: Game) {
         gameDao.insert(game)
     }
+
+    suspend fun deleteAllGames() {
+        gameDao.deleteAll()
+    }
+
+    suspend fun getGamesByWinner(winner: String): Int {
+        return gameDao.getGamesByWinner(winner)
+    }
+
 }

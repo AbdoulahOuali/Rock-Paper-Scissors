@@ -5,12 +5,15 @@
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions: select rock, paper or scissors to play.</string>
     <string name="statistics">Your all time statistics</string>
-    <string name="player_stats">Win: 1\tDraw: 1\tLose: 2</string>
-    <string name="game_result">You win!</string>
+    <string name="player_stats">Win: %d Draw: %d Lose: %d</string>
+    <string name="player_wins">You win!</string>
+    <string name="draw">Draw</string>
     <string name="versus">V.S.</string>
     <string name="computer">Computer</string>
     <string name="player">You</string>
     <string name="scissors_button">Scissors Button</string>
     <string name="paper_button">Paper Button</string>
     <string name="rock_button">Rock Button</string>
+    <string name="computer_wins">Computer wins!</string>
+    <string name="date">date</string>
 </resources>

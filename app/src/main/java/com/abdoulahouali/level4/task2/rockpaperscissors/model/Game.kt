@@ -10,10 +10,10 @@ data class Game(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "game_id")
-    var gameId: Int,
+    var gameId: Int?,
 
     @ColumnInfo(name = "date_played")
-    var gamedate: Date,
+    var gameDate: Date,
 
     @ColumnInfo(name = "player_move")
     var playerMove: Int,
@@ -21,5 +21,5 @@ data class Game(
     @ColumnInfo(name = "computer_move")
     var computerMove: Int,
 
-    var result: GameResult
+    var winner: String
 )

@@ -12,8 +12,11 @@ interface GameDao {
     suspend fun insert(game: Game)
 
     @Query("SELECT * from game_table ORDER BY date_played ASC")
-    fun getGamesHistory(): List<Game>
+    suspend fun getGamesHistory(): List<Game>
 
     @Query("DELETE FROM game_table")
     suspend fun deleteAll()
+
+    @Query("SELECT COUNT(*) FROM game_table WHERE game_table.winner = :winner")
+    suspend fun getGamesByWinner(winner: String): Int
 }
